@@ -22,7 +22,7 @@ public class Login extends AppCompatActivity {
     public void onLogin(View view) {
         if (username.getText().toString().equals("EAD") && password.getText().toString().equals("MOBILE")){
             Toast.makeText(getApplicationContext(),"LOGIN SUCCESS", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, Login.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }else{
             Toast.makeText(getApplicationContext(),"LOGIN FAILED", Toast.LENGTH_SHORT).show();
