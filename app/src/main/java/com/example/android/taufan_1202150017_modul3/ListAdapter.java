@@ -1,12 +1,14 @@
 package com.example.android.taufan_1202150017_modul3;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.LinkedList;
 
@@ -37,12 +39,21 @@ public class ListAdapter extends
 
     @Override
     public void onBindViewHolder(WordViewHolder holder, int position) {
-        String mCurrentTitle = mTitleList.get(position);
-        String mCurrentSubTitle = mSubTitleList.get(position);
-        Integer mCurrentBackground = mBackgroundList.get(position);
+        final String mCurrentTitle = mTitleList.get(position);
+        final String mCurrentSubTitle = mSubTitleList.get(position);
+        final Integer mCurrentBackground = mBackgroundList.get(position);
         holder.titleItemView.setText(mCurrentTitle);
         holder.subtitleItemView.setText(mCurrentSubTitle);
         holder.linearLayout.setBackgroundResource(mCurrentBackground);
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),Detail.class);
+                intent.putExtra("Title",mCurrentTitle);
+                intent.putExtra("Background",mCurrentBackground);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
