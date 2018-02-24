@@ -1,5 +1,6 @@
 package com.example.android.taufan_1202150017_modul3;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,8 @@ public class Login extends AppCompatActivity {
     public void onLogin(View view) {
         if (username.getText().toString().equals("EAD") && password.getText().toString().equals("MOBILE")){
             Toast.makeText(getApplicationContext(),"LOGIN SUCCESS", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, Login.class);
+            startActivity(intent);
         }else{
             Toast.makeText(getApplicationContext(),"LOGIN FAILED", Toast.LENGTH_SHORT).show();
         }
