@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         String brands[] = {"Ades","Amidis", "Aqua", "Cleo", "Club", "Equil", "Evian", "Leminerale", "Nestle", "Pristine", "Vit"};
         for (String brand: brands) {
             mTitleList.addLast(brand);
-            mSubTitleList.addLast("Air mineral terbaik adalah "+brand);
+            mSubTitleList.addLast("Ini adalah air minum merk "+brand);
         }
         mBackgroundList.addLast(R.drawable.ades);
         mBackgroundList.addLast(R.drawable.amidis);

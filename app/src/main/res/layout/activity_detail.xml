@@ -26,6 +26,43 @@
             android:layout_height="wrap_content"
             android:text="@string/lorem"/>
 
+        <ImageView
+            android:id="@+id/baterry"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+            <ImageButton
+                android:id="@+id/btnPlus"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_add_black"
+                android:onClick="onPlus"
+                />
+
+            <TextView
+                android:id="@+id/Liter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                />
+
+            <ImageButton
+                android:id="@+id/btnMin"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_remove_black"
+                android:onClick="onMin"
+                />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>
